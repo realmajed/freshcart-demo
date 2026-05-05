@@ -23,3 +23,4 @@
 - Cart is stored in a JavaScript array because it is simple and enough for this version
 - Each product has its own Add to Cart button so users can add items individually
 - Clicking Add to Cart adds 1 item each time; quantity editing is out of scope for now
+
