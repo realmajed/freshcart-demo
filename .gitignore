@@ -1,0 +1,28 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+logs/
+
+# Dependency folders (we don't have these yet, but professional habit)
+node_modules/
+vendor/
+
+# Build output
+dist/
+build/
+*.min.js.map
+
+# Environment files (NEVER commit secrets)
+.env
+.env.local
+*.key
