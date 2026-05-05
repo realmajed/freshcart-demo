@@ -1,0 +1,27 @@
+name: Say hello
+
+# When does this workflow run?
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:    # also allow manual triggering
+
+# What does it do?
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Say hello
+        run: |
+          echo "👋 Hello from GitHub Actions!"
+          echo "This workflow ran because someone pushed to main."
+          echo "The repo is at ${{ github.repository }}"
+          echo "The commit was ${{ github.sha }}"
+
+      - name: Count the files
+        run: |
+          echo "Total files in this repo:"
+          find . -type f -not -path './.git/*' | wc -l
